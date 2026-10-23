@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details | FarmConnect</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌱</span>
+
+                <span>
+                    <strong>Farm<span>Connect</span></strong>
+                    <small>Fresh Farms. Stronger Communities.</small>
+                </span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="marketplace.html">Marketplace</a>
+                <a href="product-detail.html" class="active">Product Details</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a href="marketplace.html" class="nav-button">
+                Explore Market
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- PRODUCT DETAILS INTRODUCTION -->
+    <section class="product-detail-hero">
+
+        <p class="section-label">FRESH FROM LOCAL FARMS</p>
+
+        <h1>Discover Our <span>Farm Products</span></h1>
+
+        <p>
+            Learn more about the fresh produce available from
+            local farmers through FarmConnect.
+        </p>
+
+    </section>
+
+
+    <!-- MAIN PRODUCT DETAILS -->
+    <main class="product-detail-main">
+
+        <div class="product-detail-card">
+
+            <!-- PRODUCT IMAGE -->
+          <!-- PRODUCT IMAGE -->
+<div class="detail-product-image">
+    <img
+        id="productImage"
+        src="images/farmer-produce.png"
+        alt="Fresh agricultural produce from a local farm"
+    >
+</div>  
+            <!-- PRODUCT INFORMATION -->
+            <div class="detail-product-info" id="productDetails">
+
+    <span class="product-category" id="productCategory">
+        FRESH PRODUCE
+    </span>
+
+    <h2 id="productName">Fresh Farm Vegetables</h2>
+
+    <p class="detail-description" id="productDescription">
+        Discover fresh produce harvested by local farmers.
+        FarmConnect helps customers find agricultural products
+        and connect with the people who grow them.
+    </p>
+
+    <div class="detail-price" id="productPrice">
+        Le 50 <span>/ bundle</span>
+    </div>
+
+    <div class="detail-information">
+        <p><strong>Category:</strong> <span id="productCategoryInfo">Vegetables</span></p>
+        <p><strong>Farmer:</strong> <span id="productFarmer">Local Farm</span></p>
+        <p><strong>Location:</strong> <span id="productLocation">Sierra Leone</span></p>
+        <p><strong>Availability:</strong> <span id="productAvailability">Available</span></p>
+    </div>
+
+   <div class="product-actions">
+
+    <button type="button" class="buy-button" id="buyButton">
+        Buy Now
+    </button>
+
+    <button type="button" class="contact-farmer-button" id="contactFarmerButton">
+        Contact Farmer
+    </button>
+
+    <a href="marketplace.html" class="detail-button">
+        Back to Marketplace
+    </a>
+
+</div>
+<!-- CONTACT FARMER FORM -->
+<section class="farmer-contact-section" id="farmerContactSection" hidden>
+
+    <div class="farmer-contact-card">
+
+        <h2>Contact the Farmer</h2>
+
+        <p class="farmer-contact-intro">
+            Have a question about this product?
+            Send a message to the farmer.
+        </p>
+
+        <div class="farmer-contact-details">
+            <p><strong>Farmer:</strong> <span id="contactFarmerName"></span></p>
+            <p><strong>Product:</strong> <span id="contactFarmerProduct"></span></p>
+            <p><strong>Location:</strong> <span id="contactFarmerLocation"></span></p>
+        </div>
+
+        <form id="farmerContactForm">
+
+            <div class="form-group">
+                <label for="senderName">Your Name</label>
+                <input
+                    type="text"
+                    id="senderName"
+                    placeholder="Enter your name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="senderPhone">Your Phone Number</label>
+                <input
+                    type="tel"
+                    id="senderPhone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="farmerMessage">Your Message</label>
+                <textarea
+                    id="farmerMessage"
+                    rows="5"
+                    placeholder="Write your question or enquiry..."
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit" class="send-farmer-message">
+                Prepare Message
+            </button>
+
+            <button type="button" class="cancel-farmer-message" id="cancelFarmerContact">
+                Cancel
+            </button>
+
+            <p id="farmerContactResponse" role="status" aria-live="polite"></p>
+
+        </form>
+
+    </div>
+
+</section>
+<!-- ORDER FORM -->
+<section class="order-form-section" id="orderFormSection" hidden>
+
+    <div class="order-form-card">
+
+        <h2>Complete Your Order</h2>
+
+        <p class="order-intro">
+            Enter your details to place an order with the farmer.
+        </p>
+
+        <form id="orderForm">
+
+            <div class="form-group">
+                <label for="orderProduct">Selected Product</label>
+                <input type="text" id="orderProduct" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="orderPrice">Price</label>
+                <input type="text" id="orderPrice" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="customerName">Full Name</label>
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="customerPhone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="orderQuantity">Quantity</label>
+                <input
+                    type="number"
+                    id="orderQuantity"
+                    min="1"
+                    value="1"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="orderLocation">Delivery or Collection Location</label>
+                <input
+                    type="text"
+                    id="orderLocation"
+                    placeholder="Enter your preferred location"
+                    required
+                >
+            </div>
+
+            <div class="order-total">
+                Estimated Total:
+                <span id="orderTotal"></span>
+            </div>
+
+            <button type="submit" class="submit-order-button">
+                Submit Order
+            </button>
+
+            <button
+                type="button"
+                class="cancel-order-button"
+                id="cancelOrderButton"
+            >
+                Cancel
+            </button>
+
+          <!-- ORDER CONFIRMATION CARD -->
+<div id="orderConfirmation" class="order-confirmation" hidden>
+    <div class="confirmation-icon">✓</div>
+
+    <h3>Order Request Submitted!</h3>
+
+    <p class="confirmation-message">
+        Thank you for choosing FarmConnect.
+        Your order request has been prepared successfully.
+    </p>
+
+    <div class="confirmation-details">
+        <p><strong>Product:</strong> <span id="confirmProduct"></span></p>
+        <p><strong>Quantity:</strong> <span id="confirmQuantity"></span></p>
+        <p><strong>Estimated Total:</strong> <span id="confirmTotal"></span></p>
+        <p><strong>Farmer:</strong> <span id="confirmFarmer"></span></p>
+    </div>
+
+    <p class="confirmation-note">
+        This is a demonstration. Your order has not been saved or sent
+        to the farmer.
+    </p>
+
+    <button type="button" id="newOrderButton" class="new-order-button">
+        Place Another Order
+    </button>
+</div>
+
+<p id="orderResponse" role="status" aria-live="polite"></p> 
+        </form>
+
+    </div>
+
+</section>
+
+</div>
+
+
+    </main>
+
+
+   <!-- FOOTER -->
+   <!-- PRODUCT DETAILS FOOTER -->
+
+<footer class="site-footer">
+
+
+<div class="footer-main">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+            Farm<span>Connect</span>
+        </a>
+        <p>Fresh Farms. Stronger Communities.</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="footer-navigation" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="product-detail.html">Product Details</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Social media -->
+    <div class="footer-social">
+        <a href="https://www.facebook.com/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Facebook">f</a>
+
+        <a href="https://www.instagram.com/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Instagram">◎</a>
+
+        <a href="https://www.tiktok.com/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="TikTok">♪</a>
+    </div>
+
+</div>
+
+<!-- Copyright -->
+<div class="footer-bottom">
+    <p>&copy; 2026 FarmConnect. All rights reserved.</p>
+    <p>Connecting Farmers. Building Stronger Communities.</p>
+</div>
+
+
+</footer>
+
+
+    
+<script>
+const products = {
+    bananas: {
+        name: "Fresh Bananas",
+        category: "Fruits",
+        price: "Le 20",
+        unit: "/ bunch",
+        farmer: "Ibrahim Farm",
+        location: "Waterloo",
+        description: "Fresh bananas supplied by local farmers.",
+        availability: "Available",
+image: "images/bananas.png"
+    },
+
+    watermelon: {
+        name: "Fresh Watermelon",
+        category: "Fruits",
+        price: "Le 100",
+        unit: "/ fruit",
+        farmer: "Mohamed Farm",
+        location: "Lumley",
+        description: "Fresh watermelon sourced from local farmers.",
+        availability: "Available",
+image: "images/watermelon.png"
+    },
+
+    mangoes: {
+        name: "Fresh Mangoes",
+        category: "Fruits",
+        price: "Le 80",
+        unit: "/ basket",
+        farmer: "Isatu Farm",
+        location: "Freetown",
+        description: "Fresh mangoes provided by local farmers.",
+        availability: "Available",
+image: "images/mangoes.png"
+    },
+
+    vegetables: {
+    name: "Fresh Farm Vegetables",
+    category: "Vegetables",
+    price: "Le 50",
+    unit: "/ bundle",
+    farmer: "Local Farm",
+    location: "Sierra Leone",
+    description: "Discover fresh vegetables harvested by local farmers.",
+    availability: "Available",
+    image: "images/farmer-produce.png"
+},
+   
+
+potatoes: {
+    name: "Fresh Potatoes",
+    category: "Vegetables",
+    price: "Le 35",
+    unit: "/ kg",
+    farmer: "Isatu Farm",
+    location: "Freetown",
+    description: "Fresh potatoes sourced from local farmers.",
+    availability: "Available",
+    image: "images/potatoes.png"
+},
+tomatoes: {
+    name: "Fresh Tomatoes",
+    category: "Vegetables",
+    price: "Le 30",
+    unit: "/ kg",
+    farmer: "Mohamed Farm",
+    location: "Lumley",
+    description: "Fresh tomatoes supplied by local farmers.",
+    availability: "Available",
+    image: "images/tomatoes.png"
+},
+
+"green-vegetables": {
+    name: "Green Vegetables",
+    category: "Vegetables",
+    price: "Le 50",
+    unit: "/ bundle",
+    farmer: "Ibrahim Farm",
+    location: "Waterloo",
+    description: "Fresh green vegetables harvested by local farmers.",
+    availability: "Available",
+    image: "images/green-vegetables.png"
+}
+    }
+
+
+const selectedProduct =
+    new URLSearchParams(window.location.search).get("product");
+
+const product = products[selectedProduct] || products.vegetables;
+const productImage = document.getElementById("productImage");
+
+productImage.src = product.image;
+productImage.alt = product.name;
+
+document.getElementById("productName").textContent = product.name;
+document.getElementById("productCategory").textContent =
+    product.category.toUpperCase();
+document.getElementById("productDescription").textContent =
+    product.description;
+document.getElementById("productPrice").innerHTML =
+    `${product.price} <span>${product.unit}</span>`;
+document.getElementById("productCategoryInfo").textContent =
+    product.category;
+document.getElementById("productFarmer").textContent =
+    product.farmer;
+document.getElementById("productLocation").textContent =
+    product.location;
+document.getElementById("productAvailability").textContent =
+    product.availability;
+  
+// ORDER FORM ELEMENTS
+const orderFormSection = document.getElementById("orderFormSection");
+const orderForm = document.getElementById("orderForm");
+const orderQuantity = document.getElementById("orderQuantity");
+const orderTotal = document.getElementById("orderTotal");
+const orderResponse = document.getElementById("orderResponse");
+
+const buyButton = document.getElementById("buyButton");
+const cancelOrderButton = document.getElementById("cancelOrderButton");
+
+// Get the numerical price from the selected product.
+function getProductPrice() {
+    return Number(product.price.replace(/[^0-9.]/g, ""));
+}
+
+// Calculate the estimated total.
+function updateOrderTotal() {
+    const quantity = Number(orderQuantity.value);
+    const price = getProductPrice();
+
+    if (Number.isInteger(quantity) && quantity >= 1) {
+        orderTotal.textContent = "Le " + (price * quantity).toLocaleString();
+    } else {
+        orderTotal.textContent = "Enter a valid quantity";
+    }
+}
+
+// Open the order form.
+buyButton.addEventListener("click", function () {
+    orderFormSection.hidden = false;
+
+    document.getElementById("orderProduct").value = product.name;
+
+    document.getElementById("orderPrice").value =
+        product.price + " " + product.unit;
+
+    orderQuantity.value = 1;
+    orderResponse.textContent = "";
+
+    updateOrderTotal();
+
+    orderFormSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+
+// Update the total when quantity changes.
+orderQuantity.addEventListener("input", updateOrderTotal);
+
+// Close the form when Cancel is clicked.
+cancelOrderButton.addEventListener("click", function () {
+    orderFormSection.hidden = true;
+    orderForm.reset();
+    orderResponse.textContent = "";
+});
+
+// Handle order form submission.
+orderForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const customerName =
+        document.getElementById("customerName").value.trim();
+
+    const customerPhone =
+        document.getElementById("customerPhone").value.trim();
+
+    const customerLocation =
+        document.getElementById("orderLocation").value.trim();
+
+    const quantity = Number(orderQuantity.value);
+
+    if (
+        !customerName ||
+        !customerPhone ||
+        !customerLocation ||
+        !Number.isInteger(quantity) ||
+        quantity < 1
+    ) {
+        orderResponse.textContent =
+            "Please complete all fields correctly.";
+        return;
+    }
+
+    const total = getProductPrice() * quantity;
+
+    // Fill in the confirmation card.
+    document.getElementById("confirmProduct").textContent =
+        product.name;
+
+    document.getElementById("confirmQuantity").textContent =
+        quantity + " " + product.unit.replace("/", "").trim();
+
+    document.getElementById("confirmTotal").textContent =
+        "Le " + total.toLocaleString();
+
+    document.getElementById("confirmFarmer").textContent =
+        product.farmer;
+
+    // Display the confirmation card.
+    document.getElementById("orderConfirmation").hidden = false;
+    orderForm.hidden = true;
+    orderResponse.textContent = "";
+
+    document.getElementById("orderConfirmation").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+});
+
+// Allow the customer to place another order.
+document.getElementById("newOrderButton").addEventListener("click", function () {
+    orderForm.reset();
+    orderQuantity.value = 1;
+
+    document.getElementById("orderConfirmation").hidden = true;
+    orderForm.hidden = false;
+
+    orderResponse.textContent = "";
+    updateOrderTotal();
+
+    orderForm.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+// CONTACT FARMER FORM
+
+const farmerContactSection =
+    document.getElementById("farmerContactSection");
+
+const farmerContactForm =
+    document.getElementById("farmerContactForm");
+
+const farmerContactResponse =
+    document.getElementById("farmerContactResponse");
+
+document.getElementById("contactFarmerButton").addEventListener("click", function () {
+
+    document.getElementById("contactFarmerName").textContent =
+        product.farmer;
+
+    document.getElementById("contactFarmerProduct").textContent =
+        product.name;
+
+    document.getElementById("contactFarmerLocation").textContent =
+        product.location;
+
+    farmerContactSection.hidden = false;
+
+    farmerContactResponse.textContent = "";
+
+    farmerContactSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+
+// Prepare a message for the farmer.
+farmerContactForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const senderName =
+        document.getElementById("senderName").value.trim();
+
+    const senderPhone =
+        document.getElementById("senderPhone").value.trim();
+
+    const farmerMessage =
+        document.getElementById("farmerMessage").value.trim();
+
+    if (!senderName || !senderPhone || !farmerMessage) {
+        farmerContactResponse.textContent =
+            "Please complete all fields.";
+
+        return;
+    }
+
+    const message =
+        "Hello " + product.farmer + ",\n\n" +
+        "My name is " + senderName + ".\n" +
+        "My phone number is " + senderPhone + ".\n" +
+        "I am contacting you about " + product.name + ".\n\n" +
+        farmerMessage;
+
+    // Display the message for the customer to copy.
+    farmerContactResponse.textContent =
+        "Your message is ready to send:\n\n" + message;
+});
+
+// Cancel contact form.
+document.getElementById("cancelFarmerContact").addEventListener("click", function () {
+
+    farmerContactSection.hidden = true;
+
+    farmerContactForm.reset();
+
+    farmerContactResponse.textContent = "";
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marketplace | FarmConnect</title>
+
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION BAR -->
+
+<header class="header">
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">🌱</span>
+
+            <span>
+                <strong>Farm<span>Connect</span></strong>
+                <small>Fresh Farms. Stronger Communities.</small>
+            </span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="marketplace.html" class="active">Marketplace</a>
+            <a href="product-detail.html">Product Details</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="marketplace.html" class="nav-button">
+            Explore Market
+        </a>
+
+    </div>
+</header>
+  <!-- MARKETPLACE INTRODUCTION -->
+
+<main>
+
+  <section class="marketplace-hero">
+
+    <p class="section-label">FRESH FROM LOCAL FARMS</p>
+
+    <h1>
+        Explore Our
+        <span>Farm Marketplace.</span>
+    </h1>
+
+    </p>
+
+</section>
+
+    <div class="marketplace-heading">
+      <p class="section-label">FIND YOUR FRESH PRODUCE</p>
+      <h2>Discover Farm <span>Fresh Products</span></h2>
+      <p>Explore quality agricultural products from local farmers.</p>
+    </div>
+
+    <!-- SEARCH BAR -->
+    <div class="marketplace-search">
+      <input
+        type="text"
+        id="productSearch"
+        placeholder="Search for vegetables, fruits, grains..."
+        aria-label="Search products"
+      >
+      <button type="button" onclick="searchProducts()">Search Products</button>
+    </div>
+
+    <!-- PRODUCT CATEGORIES -->
+    <div class="product-categories">
+      <button class="category-button active" onclick="filterProducts('all', this)">All Products</button>
+      <button class="category-button" onclick="filterProducts('vegetables', this)">Vegetables</button>
+      <button class="category-button" onclick="filterProducts('fruits', this)">Fruits</button>
+      <button class="category-button" onclick="filterProducts('grain', this)">Grain</button>
+    </div>
+
+   <!-- PRODUCT CARDS -->
+<!-- PRODUCT CARDS -->
+<div class="product-grid" id="productGrid">
+
+  <!-- FRUITS -->
+  <article class="product-card" data-category="fruits">
+    <div class="product-image">
+    <img src="images/bananas.png" alt="Fresh bananas">
+</div>
+    <div class="product-info">
+      <span class="product-category">FRUITS</span>
+      <h3>Fresh Bananas</h3>
+      <p class="product-price">Le 20 / bunch</p>
+      <p class="farmer-info">Waterloo · Ibrahim Farm</p>
+      <a href="product-detail.html?product=bananas"
+   class="product-button">View Details</a>
+    </div>
+  </article>
+
+  <article class="product-card" data-category="fruits">
+    <img src="images/watermelon.png" alt="Fresh watermelon">
+    <div class="product-info">
+      <span class="product-category">FRUITS</span>
+      <h3>Fresh Watermelon</h3>
+      <p class="product-price">Le 100 / fruit</p>
+      <p class="farmer-info">Lumley · Mohamed Farm</p>
+      <a href="product-detail.html?product=watermelon"
+   class="product-button">View Details</a>
+    </div>
+  </article>
+
+  <article class="product-card" data-category="fruits">
+    <div class="product-image">
+    <img src="images/mangoes.png" alt="Fresh Mangoes">
+</div>
+    <div class="product-info">
+      <span class="product-category">FRUITS</span>
+      <h3>Fresh Mangoes</h3>
+      <p class="product-price">Le 80 / basket</p>
+      <p class="farmer-info">Freetown · Isatu Farm</p>
+      <a href="product-detail.html?product=mangoes"
+   class="product-button">View Details</a>
+    </div>
+  </article>
+
+  <!-- VEGETABLES -->
+  <article class="product-card" data-category="vegetables">
+    <img src="images/tomatoes.png" alt="Fresh tomatoes">
+    <div class="product-info">
+      <span class="product-category">VEGETABLES</span>
+      <h3>Fresh Tomatoes</h3>
+      <p class="product-price">Le 30 / kg</p>
+      <p class="farmer-info">Lumley · Mohamed Farm</p>
+     <a href="product-detail.html?product=tomatoes"
+   class="product-button">
+    View Details
+</a>
+    </div>
+  </article>
+
+  <article class="product-card" data-category="vegetables">
+    <img src="images/potatoes.png" alt="Fresh Potatoes">
+    <div class="product-info">
+      <span class="product-category">VEGETABLES</span>
+      <h3>Fresh Potatoes</h3>
+      <p class="product-price">Le 35 / kg</p>
+      <p class="farmer-info">Freetown · Isatu Farm</p>
+      <a href="product-detail.html?product=potatoes"
+   class="product-button">
+    View Details
+</a>
+    </div>
+  </article>
+
+  <article class="product-card" data-category="vegetables">
+    <div class="product-image">
+    <img src="images/green-vegetables.png" alt="Fresh Green Vegetables">
+</div>
+    <div class="product-info">
+      <span class="product-category">VEGETABLES</span>
+      <h3>Green Vegetables</h3>
+      <p class="product-price">Le 50 / bundle</p>
+      <p class="farmer-info">Waterloo · Ibrahim Farm</p>
+      <a href="product-detail.html?product=green-vegetables"
+   class="product-button">
+    View Details
+</a>
+    </div>
+  </article>
+
+  <!-- GRAINS -->
+  <article class="product-card" data-category="grain">
+    <div class="product-image">
+    <img src="images/local-rice.png" alt="Local rice from sierra leone">
+</div>
+    <div class="product-info">
+      <span class="product-category">GRAIN</span>
+      <h3>Local Rice</h3>
+      <p class="product-price">Le 200 / bag</p>
+      <p class="farmer-info">Makeni · Local Farm</p>
+      <a href="product-detail.html" class="product-button">View All</a>
+    </div>
+  </article>
+
+  <article class="product-card" data-category="grain">
+    <img src="images/maize.png" alt="Fresh maize from a local farm">
+    <div class="product-info">
+      <span class="product-category">GRAIN</span>
+      <h3>Fresh Maize</h3>
+      <p class="product-price">Le 100 / bundle</p>
+      <p class="farmer-info">Bo · Local Farm</p>
+      <a href="product-detail.html" class="product-button">View All</a>
+    </div>
+  </article>
+
+  <article class="product-card" data-category="grain">
+    <div class="product-image">
+    <img src="images/groundnuts.png" alt="Fresh groundnuts from a local farm">
+</div>
+    <div class="product-info">
+      <span class="product-category">GRAIN</span>
+      <h3>Groundnuts</h3>
+      <p class="product-price">Le 80 / bag</p>
+      <p class="farmer-info">Kenema · Local Farm</p>
+      <a href="product-detail.html" class="product-button">View All</a>
+    </div>
+  </article>
+
+
+</div>
+
+    <p id="noProducts" class="no-products" hidden>
+      No products found. Try another search.
+    </p>
+
+  </section>
+  <!-- MARKETPLACE JAVASCRIPT -->
+<script>
+// Search for products already displayed on the page
+function searchProducts() {
+  const searchInput = document
+    .getElementById("productSearch")
+    .value.toLowerCase()
+    .trim();
+
+  const productCards = document.querySelectorAll(".product-card");
+  let visibleCount = 0;
+
+  productCards.forEach(function(card) {
+    const name = card.querySelector("h3").textContent.toLowerCase();
+    const description = card.querySelector(".product-info > p")
+      .textContent.toLowerCase();
+    const category = card.dataset.category.toLowerCase();
+
+    const matches =
+      name.includes(searchInput) ||
+      description.includes(searchInput) ||
+      category.includes(searchInput);
+
+    card.style.display = matches ? "" : "none";
+
+    if (matches) {
+      visibleCount++;
+    }
+  });
+
+  document.getElementById("noProducts").hidden = visibleCount > 0;
+}
+
+// Filter products by category
+function filterProducts(category, button) {
+  const productCards = document.querySelectorAll(".product-card");
+  const categoryButtons = document.querySelectorAll(".category-button");
+
+  // Clear the search field
+  document.getElementById("productSearch").value = "";
+
+  // Update the active button
+  categoryButtons.forEach(function(item) {
+    item.classList.remove("active");
+  });
+
+  button.classList.add("active");
+
+  let visibleCount = 0;
+
+  productCards.forEach(function(card) {
+    const productCategory = card.dataset.category;
+
+    const matches =
+      category === "all" || productCategory === category;
+
+    card.style.display = matches ? "" : "none";
+
+    if (matches) {
+      visibleCount++;
+    }
+  });
+
+  document.getElementById("noProducts").hidden = visibleCount > 0;
+}
+
+// Search when Enter is pressed
+document.getElementById("productSearch").addEventListener(
+  "keydown",
+  function(event) {
+    if (event.key === "Enter") {
+      searchProducts();
+    }
+  }
+);
+</script>
+ <!-- FOOTER -->
+    <footer class="marketplace-footer">
+
+
+<div class="marketplace-footer-main">
+
+    <div class="marketplace-footer-brand">
+        <a href="index.html">
+            Farm<span>Connect</span>
+        </a>
+
+        <p>Fresh Farms. Stronger Communities.</p>
+    </div>
+
+    <nav class="marketplace-footer-navigation" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="product-detail.html">Product Details</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="marketplace-social-links">
+        <a href="https://www.facebook.com/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Facebook">f</a>
+
+        <a href="https://www.instagram.com/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Instagram">◎</a>
+
+        <a href="https://www.tiktok.com/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="TikTok">♪</a>
+    </div>
+
+</div>
+
+<div class="marketplace-footer-bottom">
+    <p>&copy; 2026 FarmConnect. All rights reserved.</p>
+
+    <p>Connecting Farmers. Building Stronger Communities.</p>
+</div>
+
+
+</footer>
+
+</body>
+
+</html>
